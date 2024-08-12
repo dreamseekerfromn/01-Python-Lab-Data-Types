@@ -1,5 +1,5 @@
 import unittest
-from numbers import safe_divide, factorial, sum_of_digits
+from numbers_1 import safe_divide, factorial, sum_of_digits
 from booleans import is_divisible, complex_check
 from strings import count_vowels, replace_char, format_name, is_valid_email
 from mixed_operators import combine_and_convert, mixed_operations, compare_types
