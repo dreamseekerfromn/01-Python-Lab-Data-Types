@@ -8,7 +8,11 @@
 # 4. Reverse the string "Python".
 
 # Print the results of each operation.
-
+print("Python" + " is" + " awesome!")
+for x in range(6):
+    print("Code")
+print("Octopocalypse"[2:5])
+print("Python"[::-1])
 # Task 2: Advanced String Operations
 # ----------------------------------
 # Write a Python function that:
@@ -17,10 +21,16 @@
 
 def count_vowels(s):
     # Your code here
+    vowels = 0
+    for x in s.lower():
+        if(x == 'a' or x=='e' or x == 'i' or x =='o' or x=='u'):
+            vowels += 1
+    return vowels
     pass
 
 def replace_char(s, old, new):
     # Your code here
+    return s.replace(old, new)
     pass
 
 # Task 3: String Formatting
@@ -29,6 +39,8 @@ def replace_char(s, old, new):
 # If the name is not provided (either first or last), it should default to "Unknown".
 
 def format_name(first_name="Unknown", last_name="Unknown"):
+    if (first_name == "Unknown" or last_name =="Unknown"): return "Unknown"
+    else: return last_name + ", " + first_name
     # Your code here
     pass
 
@@ -38,5 +50,19 @@ def format_name(first_name="Unknown", last_name="Unknown"):
 
 def is_valid_email(email):
     # Your code here
+    if(not email.find("@") or not email.find(".")):
+        return False
+    try:
+        if(email.index("@") != email.rindex("@")):
+            return False
+        if(email.index(".") != email.rindex(".")):
+            return False
+        if(email.index("@") > email.index(".")):
+            return False
+        if(email.index("@") - email.index(".") == -1):
+            return False
+        return True
+    except ValueError:
+        return False
     pass
 
